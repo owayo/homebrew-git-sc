@@ -1,26 +1,26 @@
 class GitSc < Formula
   desc "AI-powered smart commit message generator for coding agents"
   homepage "https://github.com/owayo/git-smart-commit"
-  version "26.2.110"
+  version "26.2.111"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.110/git-sc-aarch64-apple-darwin.tar.gz"
-      sha256 "cc72f5dd583f6d17ce1f30ada283f1b9fa1fe599f72b57844abaa0b9b3efd19e"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.111/git-sc-aarch64-apple-darwin.tar.gz"
+      sha256 "d2886e7d8e4c2ca5a5fa58d56962449064bf5a6e76d669642c73f582ca3cb9c5"
     else
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.110/git-sc-x86_64-apple-darwin.tar.gz"
-      sha256 "8c0726175c549e4349d14ed6c51ff17325e93a2f0d43f6c1f6c41206f5d789b2"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.111/git-sc-x86_64-apple-darwin.tar.gz"
+      sha256 "05a140f7de4b7f2474fd6a5be1d08e6cca2a714decb22033ca387ed0ad539be5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.110/git-sc-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f1a64294e493bc32f61d721200c943bb45891bf2341c1f4d49a32349a6e8b26c"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.111/git-sc-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "452572ea264540bbd0a8d3c50974f96153df17062292cdfb2495fb3c62c4bc28"
     else
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.110/git-sc-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0f4635bc349acd6996ebe451803aa7704a24e14fb527ce9b087bbe617634c3e8"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.2.111/git-sc-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4bb4ba26360f497967a38f8d47c9c481ca91ddf78acc85f43e2893dd7ee7a87d"
     end
   end
 
