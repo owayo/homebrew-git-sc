@@ -1,15 +1,15 @@
 class GitSc < Formula
   desc "AI-powered smart commit message generator for coding agents"
   homepage "https://github.com/owayo/git-smart-commit"
-  url "https://github.com/owayo/git-smart-commit/archive/refs/tags/v26.3.107.tar.gz"
-  sha256 "d874020de198d486d7f3e420562443233880f65b57533b636fa6eca5a1252d72"
+  url "https://github.com/owayo/git-smart-commit/archive/refs/tags/v26.3.108.tar.gz"
+  sha256 "9bbce3867c0cdfab375171f0b57e89b0db9081e30817251aeaff0bf242dab32c"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/owayo/git-smart-commit/releases/download/v26.3.107"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "d9781036ed8e64ed8b14ca1813dcaa06bff18b3fcd209a47b5ffabdc85c9c7c2"
-    sha256 cellar: :any_skip_relocation, sonoma: "f7a0df426dd4f69e961d18faf7c7481bc62ef975ee50f35da44ce377159bbbda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "04e548ff0380af440fb1cfe3a7d3428fb5f7b9ffe8ca5bc7c7fd07f77690ed2f"
+    root_url "https://github.com/owayo/git-smart-commit/releases/download/v26.3.108"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "e1f89b475f560fd7bdeee932fed6687d289cdd330a86d50688a09adef7484178"
+    sha256 cellar: :any_skip_relocation, sonoma: "6f8ed8361552799cdf4aa2a1845be00c647d6dfb5df9d46418dc460c16d19a6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2581a7b8c36efb631452788fce3b1c1af821308ffc5466f4df1f8e0eec2dbef6"
   end
 
   depends_on "rust" => :build
