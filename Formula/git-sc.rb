@@ -1,24 +1,33 @@
 class GitSc < Formula
   desc "AI-powered smart commit message generator for coding agents"
   homepage "https://github.com/owayo/git-smart-commit"
-  url "https://github.com/owayo/git-smart-commit/archive/refs/tags/v26.9.100.tar.gz"
-  sha256 "4ddd342f25aef767b2d331eb23d436b9ab070f6ee7b78b327c5b0481de94e587"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/owayo/git-smart-commit/releases/download/v26.9.100"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "eccf7f790381182c1db11d75f3908dd5d9b2ecb6e3d22237f24749cabd99ce65"
-    sha256 cellar: :any_skip_relocation, sonoma: "0919bd98dd25cbd1a0706ad23d2b630df928b6364c6095b62804d48edf992139"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b0b71ee31c20894ed3c2942f659639669d83d6bb14b11423f5285271020eda16"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.9.101/git-sc-aarch64-apple-darwin.tar.gz"
+      sha256 "c363963c2664be2dfcbe3d140e6607e477654dae58090e4bbd88f6fc43b050ba"
+    else
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.9.101/git-sc-x86_64-apple-darwin.tar.gz"
+      sha256 "8e21c43c4ef5bc3b7ad6559516c551a533718600ee17350ebcf13e678a6acc03"
+    end
   end
 
-  depends_on "rust" => :build
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.9.101/git-sc-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "11e1f618fa5c8655f99068c9a07fb7175e5eea9679309c2b340d4f2ef3f7118e"
+    else
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.9.101/git-sc-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "16912454d0add31218e1be347616e1f2a6ca0b10b01dc189712d96890362edb3"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "git-sc"
   end
 
   test do
-    system "#{bin}/git-sc", "--version"
+    assert_match version.to_s, shell_output("#{bin}/git-sc --version")
   end
 end
