@@ -5,21 +5,21 @@ class GitSc < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.104/git-sc-aarch64-apple-darwin.tar.gz"
-      sha256 "832c35286a38369a458e3e8aabb9efa0c76b9cc501fbc00919e7497f8cd03182"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.105/git-sc-aarch64-apple-darwin.tar.gz"
+      sha256 "5da18afd8157dba078c77103d238e0e2bd0856cc72e377673a4c8c8e73e38a5c"
     else
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.104/git-sc-x86_64-apple-darwin.tar.gz"
-      sha256 "aeaf498faa401cbb3de9005b92e21ce2e070f8c760e8335d4182908582ce3749"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.105/git-sc-x86_64-apple-darwin.tar.gz"
+      sha256 "2c043e7b0ac62cfff8e0eeafe9b79ddcc63a58dffcdf0fa39b91b13ed1fe81ea"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.104/git-sc-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "657723996de034ae3debc450157f1e7e6cc50f67262e65f4dad3e70189029d7d"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.105/git-sc-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9a75cf035d6c9f39e30f99b180071eab9ae6abdc21e5518fb8928fd0f65a5f8d"
     else
-      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.104/git-sc-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c640432c1be7ec38a0945bba1496e86a2d094b4c7d6aae42167ad723c9729053"
+      url "https://github.com/owayo/git-smart-commit/releases/download/v26.10.105/git-sc-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "14bc08c9e2968f8a8e007dd1cd9f296ed756ec99e1383f246594ddca4fccd0ce"
     end
   end
 
